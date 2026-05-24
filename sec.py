@@ -10,7 +10,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 # ─────────────────────────────────────────────
 # ✅ SETTINGS — only change these
 # ─────────────────────────────────────────────
-RESEND_API_KEY  = "re_xxxxxxxxxxxxxxxxxxxxxxxx"  # ← your Resend API key
+RESEND_API_KEY  = "re_aaKU8hcz_A5ppcrUe4qzdV68afCyVC7xJ"  # ← your Resend API key
 SEND_HOUR       = 8    # ← hour to send daily reminder (24hr format, e.g. 8 = 8:00 AM)
 SEND_MINUTE     = 0    # ← minute  (e.g. 30 → 8:30 AM)
 
