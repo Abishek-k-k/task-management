@@ -11,8 +11,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 # ✅ SETTINGS — only change these
 # ─────────────────────────────────────────────
 RESEND_API_KEY  = "re_aaKU8hcz_A5ppcrUe4qzdV68afCyVC7xJ"  # ← your Resend API key
-SEND_HOUR       = 8    # ← hour to send daily reminder (24hr format, e.g. 8 = 8:00 AM)
-SEND_MINUTE     = 0    # ← minute  (e.g. 30 → 8:30 AM)
+SEND_HOUR       = 9    # ← hour to send daily reminder (24hr format, e.g. 8 = 8:00 AM)
+SEND_MINUTE     = 49    # ← minute  (e.g. 30 → 8:30 AM)
 
 # ─────────────────────────────────────────────
 # DB SETUP
@@ -103,7 +103,7 @@ def send_reminder(to_email: str, username: str, tasks: list) -> tuple:
     if not tasks:
         return False, "No pending tasks due today."
     if RESEND_API_KEY.startswith("re_xxx"):
-        return False, "API key not set. Paste your Resend key in app.py."
+        return False, "API key not set. Paste your Resend key in sec.py."
     try:
         resend.api_key = RESEND_API_KEY
         resend.Emails.send({
