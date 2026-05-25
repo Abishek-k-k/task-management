@@ -2,7 +2,7 @@ name: Daily Mail
 
 on:
   schedule:
-    - cron: '30 12 * * *'
+    - cron: '48 13 * * *'
 
 jobs:
   send-mail:
