@@ -5,12 +5,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 import hashlib
 import smtplib
+import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date, timedelta, datetime
 
-GMAIL_SENDER  = "a20114466@gmail.com"
-GMAIL_APP_PWD = "jfir zpvm elbe wntp"
+GMAIL_SENDER = os.getenv("GMAIL_SENDER")
+GMAIL_APP_PWD = os.getenv("GMAIL_APP_PWD")
 APP_NAME = "Taskflow"
 
 def inject_css():
