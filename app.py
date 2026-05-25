@@ -9,6 +9,14 @@ import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date, timedelta, datetime
+from scheduler import send_daily_reminders
+import streamlit as st
+
+query = st.query_params
+
+if query.get("secret") == "abc123":
+    send_daily_reminders()
+    st.success("Mails sent")
 
 GMAIL_SENDER = os.getenv("GMAIL_SENDER")
 GMAIL_APP_PWD = os.getenv("GMAIL_APP_PWD")
