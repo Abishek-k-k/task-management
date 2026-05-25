@@ -9,7 +9,7 @@ from datetime import date
 
 GMAIL_SENDER  = "a20114466@gmail.com"
 GMAIL_APP_PWD = "jfir zpvm elbe wntp"
-SEND_TIME = "13:25"
+SEND_TIME = "14:15"
 
 logging.basicConfig(
     level=logging.INFO,
