@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: taskflow-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py
+
+  - type: worker
+    name: taskflow-scheduler
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scheduler.py
