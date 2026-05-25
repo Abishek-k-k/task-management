@@ -3,12 +3,13 @@ import smtplib
 import schedule
 import time
 import logging
+import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date
 
-GMAIL_SENDER  = "a20114466@gmail.com"
-GMAIL_APP_PWD = "jfir zpvm elbe wntp"
+GMAIL_SENDER = os.getenv("GMAIL_SENDER")
+GMAIL_APP_PWD = os.getenv("GMAIL_APP_PWD")
 SEND_TIME = "17:08"
 
 logging.basicConfig(
